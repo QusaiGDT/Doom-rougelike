@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -25,8 +26,13 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://Characters/": "red",
 "res://Scenes/": "blue",
-"res://Weapons/": "yellow"
+"res://Weapons/": "green",
+"res://effects/": "purple"
 }
+
+[global_group]
+
+damagable=""
 
 [input]
 

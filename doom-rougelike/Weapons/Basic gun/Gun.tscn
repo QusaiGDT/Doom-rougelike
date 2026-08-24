@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b2bivfao7due4"]
+
+[ext_resource type="PackedScene" uid="uid://ca5wtlk1l7c6e" path="res://assets/guns/pew.fbx" id="1_6pdva"]
+[ext_resource type="Script" uid="uid://deqdyo8rj1j2c" path="res://Weapons/Basic gun/gun.gd" id="1_hwbi2"]
+[ext_resource type="PackedScene" uid="uid://c1566nn32wywc" path="res://effects/basic damage.tscn" id="2_6m6ai"]
+
+[sub_resource type="Animation" id="Animation_6m6ai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pew:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.13158782, -0.065147445, -0.19329439)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pew:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hwbi2"]
+resource_name = "shoot"
+length = 0.19999999999999998
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pew:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2),
+"transitions": PackedFloat32Array(0.21022427, 1, 1),
+"update": 0,
+"values": [Vector3(0.13158782, -0.065147445, -0.19329439), Vector3(0.13158782, -0.026348922, -0.19329439), Vector3(0.13158782, -0.065147445, -0.19329439)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pew:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2),
+"transitions": PackedFloat32Array(0.21022427, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(-1.7108592e-08, 1.5707964, 0.4021513), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6m6ai"]
+_data = {
+&"RESET": SubResource("Animation_6m6ai"),
+&"shoot": SubResource("Animation_hwbi2")
+}
+
+[node name="Pew" type="Node3D" unique_id=2070773366 node_paths=PackedStringArray("active_mods")]
+script = ExtResource("1_hwbi2")
+description = "a basic Pew"
+is_auto = true
+base_fire_rate = 0.25
+active_mods = [NodePath("BasicDamage"), NodePath("BasicDamage")]
+
+[node name="BasicDamage" parent="." unique_id=1462156321 instance=ExtResource("2_6m6ai")]
+description = "Its in the name, deal 50% more damage"
+damage_mult = 1.5
+
+[node name="pew" parent="." unique_id=1925523909 instance=ExtResource("1_6pdva")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1966916920]
+target_position = Vector3(0, 0, -30)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1834730966]
+libraries/ = SubResource("AnimationLibrary_6m6ai")

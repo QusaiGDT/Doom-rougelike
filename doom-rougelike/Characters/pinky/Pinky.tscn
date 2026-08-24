@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cyqq0mmkvmktn"]
+
+[ext_resource type="Script" uid="uid://cshnod2vj686p" path="res://Characters/Zombie/basic_enemy.gd" id="1_1hq04"]
+[ext_resource type="Texture2D" uid="uid://bvbjmx8bokbbg" path="res://assets/favorite-iteration-of-the-pinky-demon-v0-7ike6v78zstd1.png" id="2_afb1k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4nvk"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("2_afb1k")
+uv1_scale = Vector3(1.91, 1.91, 1.91)
+uv1_offset = Vector3(0.135, 0.005, 0)
+billboard_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_cr116"]
+material = SubResource("StandardMaterial3D_n4nvk")
+size = Vector3(1.305, 2, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhn5l"]
+size = Vector3(1.37, 2, 1)
+
+[node name="BasicEnemy" type="CharacterBody3D" unique_id=5320872 groups=["damagable"]]
+script = ExtResource("1_1hq04")
+hp = 125
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1889343064]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=297090716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_cr116")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=842866269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_uhn5l")

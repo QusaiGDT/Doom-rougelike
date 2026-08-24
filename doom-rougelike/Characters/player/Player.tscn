@@ -1,13 +1,39 @@
 [gd_scene format=3 uid="uid://cw0uicpe58jqy"]
 
 [ext_resource type="Script" uid="uid://dag6rw4ojpmw1" path="res://Characters/player/player.gd" id="1_0016b"]
+[ext_resource type="PackedScene" uid="uid://b2bivfao7due4" path="res://Weapons/Basic gun/Gun.tscn" id="2_rvyn0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0016b"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1468933087]
+[node name="Player" type="CharacterBody3D" unique_id=1468933087 groups=["damagable", "player"]]
 script = ExtResource("1_0016b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=900569181]
 shape = SubResource("CapsuleShape3D_0016b")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=58561902]
+
+[node name="Weapon holder" type="Node3D" parent="." unique_id=1302384302]
+
+[node name="Gun" parent="Weapon holder" unique_id=2070773366 instance=ExtResource("2_rvyn0")]
+
+[node name="Ui" type="Control" parent="." unique_id=178775446]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Ui" unique_id=1780349898]
+visible = false
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="Weapon label" type="Label" parent="Ui" unique_id=12616556]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 208.0
