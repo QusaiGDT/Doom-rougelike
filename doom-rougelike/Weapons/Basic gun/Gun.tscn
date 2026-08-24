@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://ca5wtlk1l7c6e" path="res://assets/guns/pew.fbx" id="1_6pdva"]
 [ext_resource type="Script" uid="uid://deqdyo8rj1j2c" path="res://Weapons/Basic gun/gun.gd" id="1_hwbi2"]
-[ext_resource type="PackedScene" uid="uid://c1566nn32wywc" path="res://effects/basic damage.tscn" id="2_6m6ai"]
 
 [sub_resource type="Animation" id="Animation_6m6ai"]
 length = 0.001
@@ -70,12 +69,9 @@ _data = {
 script = ExtResource("1_hwbi2")
 description = "a basic Pew"
 is_auto = true
+base_damage = 20.0
 base_fire_rate = 0.25
-active_mods = [NodePath("BasicDamage"), NodePath("BasicDamage")]
-
-[node name="BasicDamage" parent="." unique_id=1462156321 instance=ExtResource("2_6m6ai")]
-description = "Its in the name, deal 50% more damage"
-damage_mult = 1.5
+active_mods = [NodePath(""), NodePath("")]
 
 [node name="pew" parent="." unique_id=1925523909 instance=ExtResource("1_6pdva")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)

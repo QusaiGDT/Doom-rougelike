@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dtn3guyged7n2"]
+
+[ext_resource type="Script" uid="uid://deqdyo8rj1j2c" path="res://Weapons/Basic gun/gun.gd" id="1_foja0"]
+[ext_resource type="PackedScene" uid="uid://cedu2vgr1fc8h" path="res://assets/guns/mac10.fbx" id="5_50h04"]
+
+[sub_resource type="Animation" id="Animation_6m6ai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mac10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.13158782, -0.040630553, -0.19329439)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mac10:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hwbi2"]
+resource_name = "shoot"
+length = 0.05
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mac10:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(0.0075463913, 0.07694662),
+"update": 0,
+"values": [Vector3(0.13158782, -0.040630553, -0.19329439), Vector3(0.13158782, -0.0088343285, -0.19329439)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mac10:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.049999997),
+"transitions": PackedFloat32Array(0.0075463913, 0.07694662),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(-1.131334e-08, 1.5707964, 0.26179942)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6m6ai"]
+_data = {
+&"RESET": SubResource("Animation_6m6ai"),
+&"shoot": SubResource("Animation_hwbi2")
+}
+
+[node name="Uzi" type="Node3D" unique_id=2070773366]
+script = ExtResource("1_foja0")
+description = "Great for crowd control"
+is_auto = true
+base_damage = 5.0
+base_fire_rate = 0.05
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1966916920]
+target_position = Vector3(0, 0, -30)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1834730966]
+libraries/ = SubResource("AnimationLibrary_6m6ai")
+
+[node name="mac10" parent="." unique_id=1678883240 instance=ExtResource("5_50h04")]
+transform = Transform3D(-4.3711385e-08, 0, 1, 0, 0.99999994, 0, -0.99999994, 0, -4.371139e-08, 0.13158782, -0.040630553, -0.19329439)

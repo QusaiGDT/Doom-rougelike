@@ -5,5 +5,5 @@
 [node name="BasicDamage" type="Node" unique_id=1462156321]
 script = ExtResource("1_dhc6k")
 mod_name = "Basic Damage buff"
-description = "Its in the name, +15% damage"
-damage_mult = 1.15
+description = "Its in the name, +25% damage"
+damage_mult = 1.25

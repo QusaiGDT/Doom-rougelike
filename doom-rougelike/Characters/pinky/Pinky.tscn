@@ -22,7 +22,7 @@ size = Vector3(1.37, 2, 1)
 
 [node name="BasicEnemy" type="CharacterBody3D" unique_id=5320872 groups=["damagable"]]
 script = ExtResource("1_1hq04")
-hp = 125
+hp = 80
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1889343064]
 

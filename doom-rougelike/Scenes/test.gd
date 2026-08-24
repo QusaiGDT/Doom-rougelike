@@ -3,15 +3,17 @@ extends Node3D
 const BASIC_ENEMY = preload("res://Characters/Zombie/Basic enemy.tscn")
 const PINKY = preload("res://Characters/pinky/Pinky.tscn")
 
-@export var point_budget := 10
 
 var enemies := {BASIC_ENEMY : 1, PINKY : 3,}
 
 func _ready() -> void:
-	for enemy in get_enemy_roster(point_budget,enemies):
+	
+	$"Weapon Spawner".create_weapon()
+	
+	for enemy in get_enemy_roster(AutoLoad.point_budget,enemies):
 		var spawn_point = $"spawn locations".get_children().pick_random()
 		var enemy_inst = enemy.instantiate()
-		add_child(enemy_inst)
+		$Enemies.add_child(enemy_inst)
 		enemy_inst.global_position = spawn_point.global_position
 		await get_tree().create_timer(0.25).timeout
 
@@ -34,3 +36,10 @@ func get_enemy_roster(budget: int, enemy_costs: Dictionary) -> Array[PackedScene
 		roster.append(chosen_scene)
 		
 	return roster
+
+func _process(_delta: float) -> void:
+	if $Enemies.get_child_count() == 0:
+		AutoLoad.room_number += 1
+		AutoLoad.point_budget = round(10.0 * pow(1.55, AutoLoad.room_number - 1))
+		print("hi")
+		_ready()

@@ -13,9 +13,9 @@ shape = SubResource("CapsuleShape3D_0016b")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=58561902]
 
-[node name="Weapon holder" type="Node3D" parent="." unique_id=1302384302]
+[node name="Weapon holder" type="Node3D" parent="Camera3D" unique_id=1302384302]
 
-[node name="Gun" parent="Weapon holder" unique_id=2070773366 instance=ExtResource("2_rvyn0")]
+[node name="Gun" parent="Camera3D/Weapon holder" unique_id=2070773366 instance=ExtResource("2_rvyn0")]
 
 [node name="Ui" type="Control" parent="." unique_id=178775446]
 layout_mode = 3

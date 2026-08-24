@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cw0uicpe58jqy" path="res://Characters/player/Player.tscn" id="1_lc1oi"]
 [ext_resource type="Script" uid="uid://c27hvbyp88vvk" path="res://Scenes/test.gd" id="1_qc4db"]
 [ext_resource type="PackedScene" uid="uid://cokrj0yjmgi7g" path="res://Characters/Zombie/Basic enemy.tscn" id="2_8od7v"]
+[ext_resource type="Script" uid="uid://cr3tld5hdyl3g" path="res://Scenes/WeaponSpawner.gd" id="4_ys1qc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3qbn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -90,3 +91,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.208221, 0, -15.910613)
 
 [node name="Marker3D4" type="Marker3D" parent="spawn locations" unique_id=31864476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.208221, 0, 0.28311634)
+
+[node name="Enemies" type="Node" parent="." unique_id=1992222570]
+
+[node name="Weapon Spawner" type="Node3D" parent="." unique_id=360883041]
+script = ExtResource("4_ys1qc")
+
+[connection signal="child_exiting_tree" from="Enemies" to="." method="_on_enemies_child_exiting_tree"]
