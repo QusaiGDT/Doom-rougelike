@@ -3,14 +3,15 @@ extends Node
 const IMP = preload("uid://cokrj0yjmgi7g")
 const PINKY = preload("res://Characters/pinky/Pinky.tscn")
 const LARGE_PINKY = preload("uid://brf2ymcp64p76")
-var enemies := {IMP : 1, PINKY : 3,LARGE_PINKY : 8}
+var enemies := {IMP : 3, PINKY : 8,LARGE_PINKY : 14}
 
 
 const GUN = preload("uid://b2bivfao7due4")
 const UZI = preload("res://Weapons/Uzi/Uzi.tscn")
 const SHOTGUN = preload("uid://dvg1ejake8eeb")
+const AXE = preload("uid://c63onh6v6jdcl")
 var guns := {UZI : 2,GUN : 1,
-SHOTGUN : 3,}
+SHOTGUN : 3,AXE:3,}
 
 const BASIC_DAMAGE = preload("res://effects/basic damage.tscn")
 const BASIC_FIRE_RATE = preload("res://effects/basic FireRate.tscn")
