@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dkyxhoaofjfsv"]
+
+[ext_resource type="Script" uid="uid://c25yeu487wkkw" path="res://effects/DOT effect.gd" id="1_bcoc2"]
+
+[node name="Poision" type="Node" unique_id=1654308551]
+script = ExtResource("1_bcoc2")
+damage_per_tick = 10.0
+mod_name = "Poison"
+description = "Poisons enemies for 60 damage over 3sec"

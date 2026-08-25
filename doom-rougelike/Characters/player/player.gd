@@ -96,3 +96,4 @@ func update_ui() -> void:
 func damage(amount):
 	hp -= amount
 	if hp <= 0: queue_free()
+	if hp > max_hp : hp = max_hp

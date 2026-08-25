@@ -16,8 +16,10 @@ const BASIC_DAMAGE = preload("res://effects/basic damage.tscn")
 const BASIC_FIRE_RATE = preload("res://effects/basic FireRate.tscn")
 const CANNON = preload("res://effects/Cannon.tscn")
 const GAMBLING_ADDECTION = preload("uid://blwawg0dx8toq")
-var mods := {BASIC_DAMAGE : 2,BASIC_FIRE_RATE : 1,
-CANNON : 5, GAMBLING_ADDECTION: 3}
+const POISION = preload("uid://dkyxhoaofjfsv")
+const BLEED = preload("uid://demoifar2uko8")
+var mods := {BASIC_DAMAGE : 3,BASIC_FIRE_RATE : 1,
+CANNON : 5, GAMBLING_ADDECTION: 3,POISION:3,BLEED:2,}
 
 
 var point_budget := 10

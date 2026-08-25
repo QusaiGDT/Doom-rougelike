@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cx8q1mfpjc7i0"]
+
+[ext_resource type="Script" uid="uid://cl3yhfn6p8ky4" path="res://effects/dot_ticker.gd" id="1_xigfm"]
+
+[node name="DotTicker" type="Node" unique_id=2084899247]
+script = ExtResource("1_xigfm")
