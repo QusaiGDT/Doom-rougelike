@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dvg1ejake8eeb"]
+
+[ext_resource type="Script" uid="uid://bky61gibxc6mx" path="res://Weapons/Shotgun/Shotgun.gd" id="1_3lyww"]
+[ext_resource type="PackedScene" uid="uid://b0yv5avc3n3bg" path="res://assets/guns/shotgun.fbx" id="2_x3vbk"]
+
+[sub_resource type="Animation" id="Animation_6m6ai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5393152e-08, 1.5707964, 0.3598718)]
+}
+
+[sub_resource type="Animation" id="Animation_hwbi2"]
+resource_name = "shoot"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shotgun:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(0.066985905, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(-1.5393152e-08, 1.5707964, 0.3598718), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6m6ai"]
+_data = {
+&"RESET": SubResource("Animation_6m6ai"),
+&"shoot": SubResource("Animation_hwbi2")
+}
+
+[node name="shotgun" type="Node3D" unique_id=2070773366]
+script = ExtResource("1_3lyww")
+description = "smoove off"
+base_fire_rate = 1.0
+
+[node name="shotgun" parent="." unique_id=141467930 instance=ExtResource("2_x3vbk")]
+transform = Transform3D(-4.6332087e-08, 9.860548e-10, 1, 0.35215425, 0.935942, 1.5393152e-08, -0.935942, 0.35215425, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1834730966]
+libraries/ = SubResource("AnimationLibrary_6m6ai")
+
+[node name="Raycasts" type="Node3D" parent="." unique_id=2102681554]
+
+[node name="RayCast3D" type="RayCast3D" parent="Raycasts" unique_id=1966916920]
+target_position = Vector3(0, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D2" type="RayCast3D" parent="Raycasts" unique_id=1453330614]
+target_position = Vector3(-0.5, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D3" type="RayCast3D" parent="Raycasts" unique_id=231482325]
+target_position = Vector3(-1, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D5" type="RayCast3D" parent="Raycasts" unique_id=316965720]
+target_position = Vector3(0.5, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D6" type="RayCast3D" parent="Raycasts" unique_id=100431568]
+target_position = Vector3(1, 0, -10)
+collision_mask = 7

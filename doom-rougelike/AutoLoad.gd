@@ -1,17 +1,22 @@
 extends Node
 
-const BASIC_ENEMY = preload("res://Characters/Zombie/Basic enemy.tscn")
+const IMP = preload("uid://cokrj0yjmgi7g")
 const PINKY = preload("res://Characters/pinky/Pinky.tscn")
-var enemies := {BASIC_ENEMY : 1, PINKY : 3,}
+var enemies := {IMP : 1, PINKY : 3,}
 
 
 const GUN = preload("uid://b2bivfao7due4")
 const UZI = preload("res://Weapons/Uzi/Uzi.tscn")
-var guns := {UZI : 2,GUN : 1}
+const SHOTGUN = preload("uid://dvg1ejake8eeb")
+var guns := {UZI : 2,GUN : 1,
+SHOTGUN : 3,}
 
 const BASIC_DAMAGE = preload("res://effects/basic damage.tscn")
 const BASIC_FIRE_RATE = preload("res://effects/basic FireRate.tscn")
-var mods := {BASIC_DAMAGE : 2,BASIC_FIRE_RATE : 1}
+const CANNON = preload("res://effects/Cannon.tscn")
+const GAMBLING_ADDECTION = preload("uid://blwawg0dx8toq")
+var mods := {BASIC_DAMAGE : 2,BASIC_FIRE_RATE : 1,
+CANNON : 5, GAMBLING_ADDECTION: 3}
 
 
 var point_budget := 10

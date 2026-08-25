@@ -41,10 +41,10 @@ tracks/0/path = NodePath("mac10:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(0.0075463913, 0.07694662),
+"times": PackedFloat32Array(0, 0.033333335, 0.05),
+"transitions": PackedFloat32Array(0.19614643, 1.1095705, 0.0075463913),
 "update": 0,
-"values": [Vector3(0.13158782, -0.040630553, -0.19329439), Vector3(0.13158782, -0.0088343285, -0.19329439)]
+"values": [Vector3(0.13158782, -0.040630553, -0.19329439), Vector3(0.13158782, -0.0088343285, -0.19329439), Vector3(0.13158782, -0.040630553, -0.19329439)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -53,10 +53,10 @@ tracks/1/path = NodePath("mac10:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.049999997),
-"transitions": PackedFloat32Array(0.0075463913, 0.07694662),
+"times": PackedFloat32Array(0, 0.033333335, 0.05),
+"transitions": PackedFloat32Array(0.19614643, 1.1095705, 0.0075463913),
 "update": 0,
-"values": [Vector3(0, 1.5707964, 0), Vector3(-1.131334e-08, 1.5707964, 0.26179942)]
+"values": [Vector3(0, 1.5707964, 0), Vector3(-1.131334e-08, 1.5707964, 0.26179942), Vector3(0, 1.5707964, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6m6ai"]

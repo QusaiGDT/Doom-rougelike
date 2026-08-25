@@ -8,7 +8,7 @@ class_name WeaponBase
 @export var base_damage := 10.0
 @export var base_fire_rate := 0.5 
 @export var base_crit_chance := 0.05
-@export var base_crit_mult := 1.25
+@export var base_crit_mult := 2.0
 
 @export var active_mods: Array[Node] = []
 
@@ -53,9 +53,15 @@ func get_crit_chance() -> float:
 			total_crit += mod.bonus_crit_chance
 	return total_crit
 
+func get_crit_mult() -> float:
+	var total_crit = base_crit_mult
+	for mod in active_mods:
+		if mod is StatModBase:
+			total_crit += mod.bonus_crit_mult
+	return total_crit
 
 func calculate_shot_damage() -> float:
 	var dmg = get_damage()
 	if randf() < get_crit_chance():
-		dmg *= base_crit_mult
+		dmg *= get_crit_mult()
 	return dmg

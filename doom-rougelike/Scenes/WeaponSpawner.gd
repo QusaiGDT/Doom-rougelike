@@ -2,7 +2,7 @@ extends Node3D
 
 func create_weapon() -> void:
 	@warning_ignore("integer_division")
-	var budget: int = AutoLoad.point_budget / 10
+	var budget: int = AutoLoad.point_budget / 8
 	
 	var affordable_guns: Array[PackedScene] = AutoLoad.get_affordable_items(budget, AutoLoad.guns)
 	if affordable_guns.is_empty():
