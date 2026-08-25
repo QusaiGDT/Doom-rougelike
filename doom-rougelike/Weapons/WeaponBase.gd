@@ -37,7 +37,7 @@ func get_damage() -> float:
 	for mod in active_mods:
 		if mod is StatModBase:
 			total_dmg *= mod.damage_mult
-	return total_dmg
+	return maxf(total_dmg, base_damage * 0.1)
 
 func get_fire_rate() -> float:
 	var total_rate = base_fire_rate
@@ -62,6 +62,18 @@ func get_crit_mult() -> float:
 
 func calculate_shot_damage() -> float:
 	var dmg = get_damage()
-	if randf() < get_crit_chance():
-		dmg *= get_crit_mult()
+	var chance = get_crit_chance()
+	var base_crit_m = get_crit_mult()
+	
+	var guaranteed_crits: int = int(chance) 
+	
+	var bonus_chance: float = fmod(chance, 1.0)
+	
+	var total_crits: int = guaranteed_crits
+	if randf() < bonus_chance:
+		total_crits += 1
+		
+	for i in range(total_crits):
+		dmg *= base_crit_m
+		
 	return dmg

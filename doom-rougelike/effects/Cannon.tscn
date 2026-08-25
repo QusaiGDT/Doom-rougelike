@@ -7,4 +7,4 @@ script = ExtResource("1_61ocx")
 mod_name = "Cannon"
 description = "2x damage, -50% fire rate "
 damage_mult = 2.0
-fire_rate_mult = 0.5
+fire_rate_mult = 1.5

@@ -1,6 +1,34 @@
 extends Node3D
 
+var weapon_held: Node
+
+func interact() -> void:
+	
+	var holder = $"../Player/Camera3D/Weapon holder/"
+	var player_weapon = null
+	
+	if holder.get_child_count() > 0:
+		player_weapon = holder.get_child(0)
+		holder.remove_child(player_weapon)
+	
+	if is_instance_valid(weapon_held):
+		if weapon_held.get_parent():
+			weapon_held.get_parent().remove_child(weapon_held)
+		holder.add_child(weapon_held)
+		
+		weapon_held.position = Vector3.ZERO
+		weapon_held.rotation = Vector3.ZERO
+		weapon_held.show()
+	
+	weapon_held = player_weapon
+	if is_instance_valid(weapon_held):
+		add_child(weapon_held)
+		weapon_held.hide() 
+
 func create_weapon() -> void:
+	if is_instance_valid(weapon_held):
+		weapon_held.queue_free()
+		
 	@warning_ignore("integer_division")
 	var budget: int = AutoLoad.point_budget / 8
 	
@@ -20,7 +48,9 @@ func create_weapon() -> void:
 		base.add_child(mod_instance)
 		base.active_mods.append(mod_instance)
 	
-	var holder = $"../Player/Camera3D/Weapon holder/"
-	for child in holder.get_children():
-		child.queue_free()
-	holder.add_child(base)
+	weapon_held = base
+	add_child(weapon_held)
+	weapon_held.hide() 
+	show()
+	await get_tree().create_timer(10).timeout
+	get_parent()._ready()

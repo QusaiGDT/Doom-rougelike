@@ -4,7 +4,7 @@
 
 [node name="Gambling" type="Node" unique_id=899190444]
 script = ExtResource("1_8k2o2")
-mod_name = "Gambling addect"
+mod_name = "Gambling addict"
 description = "+50% Crit chance, +500% crit damage, -75% base damage "
 damage_mult = 0.25
 bonus_crit_chance = 0.5

@@ -21,6 +21,11 @@ func _ready():
 		current_weapon = weapon_holder.get_child(0) as WeaponBase
 
 func _unhandled_input(event):
+	if Input.is_action_just_pressed("interact"):
+		if $"Camera3D/Interact cast".is_colliding():
+			if $"Camera3D/Interact cast".get_collider().is_in_group("Interactable"):
+				$"Camera3D/Interact cast".get_collider().interact()
+	
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)

@@ -20,6 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hwbi2"]
 resource_name = "shoot"
+length = 1.5
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -28,7 +29,7 @@ tracks/0/path = NodePath("shotgun:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 1),
+"times": PackedFloat32Array(0, 0.5, 1.5),
 "transitions": PackedFloat32Array(0.066985905, 1, 1),
 "update": 0,
 "values": [Vector3(0, 1.5707964, 0), Vector3(-1.5393152e-08, 1.5707964, 0.3598718), Vector3(0, 1.5707964, 0)]
@@ -43,7 +44,8 @@ _data = {
 [node name="shotgun" type="Node3D" unique_id=2070773366]
 script = ExtResource("1_3lyww")
 description = "smoove off"
-base_fire_rate = 1.0
+base_damage = 20.0
+base_fire_rate = 1.5
 
 [node name="shotgun" parent="." unique_id=141467930 instance=ExtResource("2_x3vbk")]
 transform = Transform3D(-4.6332087e-08, 9.860548e-10, 1, 0.35215425, 0.935942, 1.5393152e-08, -0.935942, 0.35215425, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)

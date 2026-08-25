@@ -2,7 +2,8 @@ extends Node
 
 const IMP = preload("uid://cokrj0yjmgi7g")
 const PINKY = preload("res://Characters/pinky/Pinky.tscn")
-var enemies := {IMP : 1, PINKY : 3,}
+const LARGE_PINKY = preload("uid://brf2ymcp64p76")
+var enemies := {IMP : 1, PINKY : 3,LARGE_PINKY : 8}
 
 
 const GUN = preload("uid://b2bivfao7due4")

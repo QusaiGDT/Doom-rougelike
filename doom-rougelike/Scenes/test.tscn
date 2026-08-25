@@ -118,7 +118,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.208221, 0, 0.28311634)
 
 [node name="Enemies" type="Node" parent="." unique_id=1992222570]
 
-[node name="Weapon Spawner" type="Node3D" parent="." unique_id=360883041]
+[node name="Weapon Spawner" type="CSGBox3D" parent="." unique_id=1033827604 groups=["Interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+use_collision = true
+collision_layer = 4
+collision_mask = 7
+material = SubResource("StandardMaterial3D_o3qbn")
 script = ExtResource("4_ys1qc")
-
-[connection signal="child_exiting_tree" from="Enemies" to="." method="_on_enemies_child_exiting_tree"]
