@@ -1,0 +1,160 @@
+{
+	"categories": [
+		{
+			"uuid": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "9cbeae7d-ec31-4819-96e2-4a50cdc8851e",
+			"title": "Todo-Content",
+			"tasks": [
+				"8157dc8c-f984-4156-aa16-22bccb08f7d1",
+				"67ca7c2c-1c57-41c5-8e69-82a6c280df3f",
+				"65672810-6db4-44bd-b6f0-0b33f0e0101d",
+				"73496e5f-91e6-4b5a-abe9-1f0ef810d1e9",
+				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
+				"c409f332-bd63-4450-99c9-6030eb6d6f9b",
+				"8ef3154d-d6c3-4d30-8b5f-4d62d595c108",
+				"6ee4b9d1-0cab-40a5-babc-da35fd922ba2"
+			]
+		},
+		{
+			"uuid": "0c26d5f3-aebe-460d-b572-91d6ad4abc69",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "1c8c4781-ca6f-43fc-936e-a52a132b91be",
+			"title": "Done",
+			"tasks": []
+		},
+		{
+			"uuid": "94163356-9ab1-4585-9ca7-e9bcf5dfdb8c",
+			"title": "Todo-Mechanics",
+			"tasks": [
+				"bcd87a89-427d-48c6-bb58-bd0a51624bd5",
+				"50d7f74a-0118-44f6-935b-0e6f2ac95ce5",
+				"a6904c9d-21ca-4989-976b-d81fec774dcb",
+				"2fb53c33-8061-4610-95bd-40662146e456",
+				"c2d6acff-8e0f-4c9e-a36b-9c504cc64d1f"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "6ee4b9d1-0cab-40a5-babc-da35fd922ba2",
+			"title": "Bleed mod",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "67ca7c2c-1c57-41c5-8e69-82a6c280df3f",
+			"title": "Gernades",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "8157dc8c-f984-4156-aa16-22bccb08f7d1",
+			"title": "RPG",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "bcd87a89-427d-48c6-bb58-bd0a51624bd5",
+			"title": "Random maps",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "50d7f74a-0118-44f6-935b-0e6f2ac95ce5",
+			"title": "Healing",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "a6904c9d-21ca-4989-976b-d81fec774dcb",
+			"title": "Poision effects and stacking(bleed)",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "2fb53c33-8061-4610-95bd-40662146e456",
+			"title": "Life steal",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "c2d6acff-8e0f-4c9e-a36b-9c504cc64d1f",
+			"title": "Shop between maps? reroll mods?",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "65672810-6db4-44bd-b6f0-0b33f0e0101d",
+			"title": "Flamethrower",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "73496e5f-91e6-4b5a-abe9-1f0ef810d1e9",
+			"title": "Flamethrower",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "c409f332-bd63-4450-99c9-6030eb6d6f9b",
+			"title": "lost soul enemy",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "8ef3154d-d6c3-4d30-8b5f-4d62d595c108",
+			"title": "Poision mod",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
+			"title": "Sword",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "c0267f10-73c8-4abf-ac1e-22f7927de080",
+			"title": "New task",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"9cbeae7d-ec31-4819-96e2-4a50cdc8851e",
+				"94163356-9ab1-4585-9ca7-e9bcf5dfdb8c"
+			],
+			[
+				"0c26d5f3-aebe-460d-b572-91d6ad4abc69"
+			],
+			[
+				"1c8c4781-ca6f-43fc-936e-a52a132b91be"
+			]
+		]
+	}
+}
