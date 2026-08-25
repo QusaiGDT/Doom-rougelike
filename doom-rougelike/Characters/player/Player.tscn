@@ -6,6 +6,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0016b"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1468933087 groups=["damagable", "player"]]
+collision_mask = 7
 script = ExtResource("1_0016b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=900569181]
@@ -37,3 +38,14 @@ color = Color(0, 0, 0, 0.22745098)
 layout_mode = 0
 offset_right = 192.0
 offset_bottom = 208.0
+
+[node name="HP" type="Label" parent="Ui" unique_id=957195470]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_right = 31.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "100/100"

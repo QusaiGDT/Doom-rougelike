@@ -32,7 +32,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_hwbi2"]
 resource_name = "shoot"
-length = 0.19999999999999998
+length = 0.2
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -71,13 +71,14 @@ description = "a basic Pew"
 is_auto = true
 base_damage = 20.0
 base_fire_rate = 0.25
-active_mods = [NodePath(""), NodePath("")]
+active_mods = [null, null]
 
 [node name="pew" parent="." unique_id=1925523909 instance=ExtResource("1_6pdva")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=1966916920]
 target_position = Vector3(0, 0, -30)
+collision_mask = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1834730966]
 libraries/ = SubResource("AnimationLibrary_6m6ai")

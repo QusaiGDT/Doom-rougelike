@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyqq0mmkvmktn"]
 
-[ext_resource type="Script" uid="uid://cshnod2vj686p" path="res://Characters/Zombie/basic_enemy.gd" id="1_1hq04"]
+[ext_resource type="Script" uid="uid://c1dfm7s27iywp" path="res://Characters/pinky/pinky.gd" id="1_afb1k"]
 [ext_resource type="Texture2D" uid="uid://bvbjmx8bokbbg" path="res://assets/favorite-iteration-of-the-pinky-demon-v0-7ike6v78zstd1.png" id="2_afb1k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4nvk"]
@@ -20,9 +20,11 @@ size = Vector3(1.305, 2, 0)
 [sub_resource type="BoxShape3D" id="BoxShape3D_uhn5l"]
 size = Vector3(1.37, 2, 1)
 
-[node name="BasicEnemy" type="CharacterBody3D" unique_id=5320872 groups=["damagable"]]
-script = ExtResource("1_1hq04")
-hp = 80
+[node name="Pinky" type="CharacterBody3D" unique_id=5320872 groups=["damagable"]]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_afb1k")
+hp = 50
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1889343064]
 
@@ -33,3 +35,10 @@ mesh = SubResource("BoxMesh_cr116")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=842866269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_uhn5l")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1512106483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, 0, -10)
+
+[node name="Projectile spawn point" type="Node3D" parent="." unique_id=1749674320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.9395329)

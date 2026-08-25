@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name EnemyCharacter3D
 
 const SPEED = 5.0
 
@@ -15,6 +16,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	if is_instance_valid(player):
+		look_at(player.global_position)
 		navigation_agent_3d.target_position = player.global_position
 
 	if not navigation_agent_3d.is_navigation_finished():
@@ -30,6 +32,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func damage(amount):
-	print(amount)
 	hp -= amount
 	if hp <= 0: queue_free()

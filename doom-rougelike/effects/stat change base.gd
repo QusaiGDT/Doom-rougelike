@@ -3,7 +3,6 @@ extends Node
 
 @export var mod_name: String = "Basic Mod"
 @export var description: String = "+0% Stat"
-@export var point_value := 2
 
 # Multipliers
 @export var damage_mult: float = 1.0

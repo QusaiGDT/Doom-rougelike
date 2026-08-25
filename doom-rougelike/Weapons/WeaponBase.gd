@@ -35,21 +35,21 @@ func _process(delta: float) -> void:
 func get_damage() -> float:
 	var total_dmg = base_damage
 	for mod in active_mods:
-		if "damage_mult" in mod:
+		if mod is StatModBase:
 			total_dmg *= mod.damage_mult
 	return total_dmg
 
 func get_fire_rate() -> float:
 	var total_rate = base_fire_rate
 	for mod in active_mods:
-		if "fire_rate_mult" in mod:
+		if mod is StatModBase:
 			total_rate *= mod.fire_rate_mult
 	return total_rate
 
 func get_crit_chance() -> float:
 	var total_crit = base_crit_chance
 	for mod in active_mods:
-		if "bonus_crit_chance" in mod:
+		if mod is StatModBase:
 			total_crit += mod.bonus_crit_chance
 	return total_crit
 

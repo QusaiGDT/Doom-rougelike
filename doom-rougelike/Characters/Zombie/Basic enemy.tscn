@@ -21,8 +21,10 @@ size = Vector3(1.305, 2, 0)
 size = Vector3(1.37, 2, 1)
 
 [node name="BasicEnemy" type="CharacterBody3D" unique_id=5320872 groups=["damagable"]]
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_cr116")
-hp = 50
+hp = 25
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1889343064]
 

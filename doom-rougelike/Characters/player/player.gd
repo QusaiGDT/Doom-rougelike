@@ -5,6 +5,9 @@ const ACCEL = 20.0
 const FRICTION = 14.0      
 const SENSITIVITY = 0.003  
 
+@export var max_hp := 200
+@export var hp := 200
+
 @onready var camera = $Camera3D
 
 @onready var weapon_label: Label = $"Ui/Weapon label"
@@ -43,6 +46,12 @@ func _physics_process(delta):
 
 
 func update_ui() -> void:
+	
+	
+	$Ui/HP.text = str(hp) + "/" + str(max_hp) + "\n"
+	$Ui/HP.text +=  "round " + str(AutoLoad.room_number)
+	$Ui/HP.text +=  "\nscore " + str(AutoLoad.point_budget)
+	
 	if weapon_holder.get_child_count() > 0:
 		current_weapon = weapon_holder.get_child(0) as WeaponBase
 	
@@ -62,14 +71,12 @@ func update_ui() -> void:
 		text += "No Modifiers"
 	else:
 		for mod in current_weapon.active_mods:
-			# Skip freed or empty slots
 			if not is_instance_valid(mod):
 				continue
 				
 			var mod_name = mod.get("mod_name")
 			if mod_name == null or str(mod_name) == "":
-				mod_name = mod.name # Node's scene tree name
-				
+				mod_name = mod.name
 			var mod_desc = mod.get("description")
 			if mod_desc == null:
 				mod_desc = ""
@@ -80,3 +87,7 @@ func update_ui() -> void:
 			text += "\n"
 
 	weapon_label.text = text
+
+func damage(amount):
+	hp -= amount
+	if hp <= 0: queue_free()
