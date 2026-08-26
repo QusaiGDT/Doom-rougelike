@@ -14,7 +14,6 @@
 				"8157dc8c-f984-4156-aa16-22bccb08f7d1",
 				"67ca7c2c-1c57-41c5-8e69-82a6c280df3f",
 				"65672810-6db4-44bd-b6f0-0b33f0e0101d",
-				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
 				"c409f332-bd63-4450-99c9-6030eb6d6f9b"
 			]
 		},
@@ -29,7 +28,8 @@
 			"tasks": [
 				"a6904c9d-21ca-4989-976b-d81fec774dcb",
 				"8e5f7679-5806-4bc1-9f4d-0ad421d33142",
-				"6ee4b9d1-0cab-40a5-babc-da35fd922ba2"
+				"6ee4b9d1-0cab-40a5-babc-da35fd922ba2",
+				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050"
 			]
 		},
 		{
@@ -116,7 +116,7 @@
 		},
 		{
 			"uuid": "0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
-			"title": "Sword",
+			"title": "Axe",
 			"description": "",
 			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
 			"steps": []
