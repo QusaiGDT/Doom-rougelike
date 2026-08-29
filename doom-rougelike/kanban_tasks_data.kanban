@@ -14,14 +14,15 @@
 				"8157dc8c-f984-4156-aa16-22bccb08f7d1",
 				"67ca7c2c-1c57-41c5-8e69-82a6c280df3f",
 				"65672810-6db4-44bd-b6f0-0b33f0e0101d",
-				"c409f332-bd63-4450-99c9-6030eb6d6f9b",
-				"2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6"
+				"c409f332-bd63-4450-99c9-6030eb6d6f9b"
 			]
 		},
 		{
 			"uuid": "0c26d5f3-aebe-460d-b572-91d6ad4abc69",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6"
+			]
 		},
 		{
 			"uuid": "1c8c4781-ca6f-43fc-936e-a52a132b91be",

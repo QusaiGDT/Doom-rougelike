@@ -3,6 +3,8 @@ extends Node3D
 var map_pool = [
 	"res://Scenes/Map pool/M1.tscn",
 	"res://Scenes/Map pool/test.tscn",
+	"res://Scenes/Map pool/M2.tscn",
+	
 ]
 
 func _ready() -> void:
