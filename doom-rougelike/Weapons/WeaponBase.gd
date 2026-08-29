@@ -16,7 +16,6 @@ var _fire_timer: float = 0.0
 
 
 func _process(delta: float) -> void:
-	
 	if _fire_timer > 0.0:
 		_fire_timer -= delta
 
@@ -26,8 +25,10 @@ func _process(delta: float) -> void:
 	else:
 		wants_to_shoot = Input.is_action_just_pressed("shoot")
 
+	# Fire as soon as timer clears
 	if wants_to_shoot and _fire_timer <= 0.0:
-		_fire_timer = get_fire_rate()
+		# Use maxf to prevent negative timer bleed on high frame rates
+		_fire_timer = maxf(_fire_timer + get_fire_rate(), get_fire_rate())
 		_shoot()
 
 @abstract func _shoot() -> void

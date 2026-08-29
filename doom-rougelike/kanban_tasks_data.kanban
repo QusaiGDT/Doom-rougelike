@@ -14,7 +14,8 @@
 				"8157dc8c-f984-4156-aa16-22bccb08f7d1",
 				"67ca7c2c-1c57-41c5-8e69-82a6c280df3f",
 				"65672810-6db4-44bd-b6f0-0b33f0e0101d",
-				"c409f332-bd63-4450-99c9-6030eb6d6f9b"
+				"c409f332-bd63-4450-99c9-6030eb6d6f9b",
+				"2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6"
 			]
 		},
 		{
@@ -29,14 +30,14 @@
 				"a6904c9d-21ca-4989-976b-d81fec774dcb",
 				"8e5f7679-5806-4bc1-9f4d-0ad421d33142",
 				"6ee4b9d1-0cab-40a5-babc-da35fd922ba2",
-				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050"
+				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
+				"bcd87a89-427d-48c6-bb58-bd0a51624bd5"
 			]
 		},
 		{
 			"uuid": "94163356-9ab1-4585-9ca7-e9bcf5dfdb8c",
 			"title": "Todo-Mechanics",
 			"tasks": [
-				"bcd87a89-427d-48c6-bb58-bd0a51624bd5",
 				"50d7f74a-0118-44f6-935b-0e6f2ac95ce5",
 				"2fb53c33-8061-4610-95bd-40662146e456",
 				"c2d6acff-8e0f-4c9e-a36b-9c504cc64d1f"
@@ -124,6 +125,13 @@
 		{
 			"uuid": "8e5f7679-5806-4bc1-9f4d-0ad421d33142",
 			"title": "Poision mod",
+			"description": "",
+			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
+			"steps": []
+		},
+		{
+			"uuid": "2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6",
+			"title": "Add 5 maps",
 			"description": "",
 			"category": "d7c64619-87f9-459b-b9df-772fc558da5e",
 			"steps": []

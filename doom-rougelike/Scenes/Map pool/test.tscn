@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://coyxy0pfrk8tg"]
 
-[ext_resource type="PackedScene" uid="uid://cw0uicpe58jqy" path="res://Characters/player/Player.tscn" id="1_lc1oi"]
 [ext_resource type="Script" uid="uid://c27hvbyp88vvk" path="res://Scenes/test.gd" id="1_qc4db"]
-[ext_resource type="PackedScene" uid="uid://cokrj0yjmgi7g" path="res://Characters/Imp/Imp.tscn" id="2_8od7v"]
+[ext_resource type="Script" uid="uid://cx581hhvd0j8a" path="res://Scenes/door.gd" id="3_t45x2"]
 [ext_resource type="Script" uid="uid://cr3tld5hdyl3g" path="res://Scenes/WeaponSpawner.gd" id="4_ys1qc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3qbn"]
@@ -40,9 +39,6 @@ environment = SubResource("Environment_8od7v")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=769493333]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Player" parent="." unique_id=1468933087 instance=ExtResource("1_lc1oi")]
-transform = Transform3D(0.9999794, -0.0047289003, 0.004342457, 0.0047063893, 0.99997556, 0.0051771402, -0.0043668444, -0.005156586, 0.99997723, 0, 1, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1968492779]
 navigation_mesh = SubResource("NavigationMesh_lc1oi")
@@ -99,9 +95,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 3, 14)
 size = Vector3(1, 5, 1)
 material = SubResource("StandardMaterial3D_lc1oi")
 
-[node name="BasicEnemy" parent="." unique_id=5320872 instance=ExtResource("2_8od7v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 13)
-
 [node name="spawn locations" type="Node" parent="." unique_id=497253930]
 
 [node name="Marker3D" type="Marker3D" parent="spawn locations" unique_id=1323796539]
@@ -119,10 +112,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.208221, 0, 0.28311634)
 [node name="Enemies" type="Node" parent="." unique_id=1992222570]
 
 [node name="Weapon Spawner" type="CSGBox3D" parent="." unique_id=1033827604 groups=["Interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
 use_collision = true
 collision_layer = 4
 collision_mask = 7
 material = SubResource("StandardMaterial3D_o3qbn")
 script = ExtResource("4_ys1qc")
+
+[node name="Weapon Spawner2" type="CSGBox3D" parent="." unique_id=2018242652 groups=["Interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+use_collision = true
+collision_layer = 4
+collision_mask = 7
+material = SubResource("StandardMaterial3D_o3qbn")
+script = ExtResource("4_ys1qc")
+
+[node name="Door" type="CSGBox3D" parent="." unique_id=1308363808 groups=["Interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1.5, 0.5)
+use_collision = true
+collision_layer = 4
+collision_mask = 7
+size = Vector3(1, 2, 2)
+material = SubResource("StandardMaterial3D_o3qbn")
+script = ExtResource("3_t45x2")
+
+[node name="Player Spawn Position" type="Marker3D" parent="." unique_id=103779387]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2, -17)

@@ -64,9 +64,13 @@ _data = {
 &"Shoot": SubResource("Animation_y8ten")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y8ten"]
+size = Vector3(2, 1, 3)
+
 [node name="Axe" type="Node3D" unique_id=665872422]
 script = ExtResource("1_y8ten")
 description = "Applies Bleed damage"
+is_auto = true
 
 [node name="axe_A2" parent="." unique_id=1385847251 instance=ExtResource("1_5370k")]
 transform = Transform3D(0.25719884, 0, -0.7469597, 0, 0.79, 0, 0.7469597, 0, 0.25719884, 0.405, -0.605, -0.69)
@@ -74,6 +78,10 @@ transform = Transform3D(0.25719884, 0, -0.7469597, 0, 0.79, 0, 0.7469597, 0, 0.2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=176489962]
 libraries/ = SubResource("AnimationLibrary_emf3m")
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=886799505]
-target_position = Vector3(0, 0, -5)
-collision_mask = 7
+[node name="Area3D" type="Area3D" parent="." unique_id=884508279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7215389)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1470091387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.1734824)
+shape = SubResource("BoxShape3D_y8ten")

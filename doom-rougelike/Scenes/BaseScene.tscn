@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cby8l64hv5vms"]
+
+[ext_resource type="Script" uid="uid://d0lp5v2v4m2fk" path="res://Scenes/base_scene.gd" id="1_brycl"]
+[ext_resource type="PackedScene" uid="uid://cw0uicpe58jqy" path="res://Characters/player/Player.tscn" id="2_ufl4h"]
+
+[node name="BaseScene" type="Node3D" unique_id=824235920]
+script = ExtResource("1_brycl")
+
+[node name="Player" parent="." unique_id=1468933087 instance=ExtResource("2_ufl4h")]
+
+[node name="Map" type="Node3D" parent="." unique_id=1589632010]

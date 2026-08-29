@@ -20,7 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_hwbi2"]
 resource_name = "shoot"
-length = 1.5
+length = 1.2
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -29,7 +29,7 @@ tracks/0/path = NodePath("shotgun:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5),
+"times": PackedFloat32Array(0, 0.5, 1.2),
 "transitions": PackedFloat32Array(0.066985905, 1, 1),
 "update": 0,
 "values": [Vector3(0, 1.5707964, 0), Vector3(-1.5393152e-08, 1.5707964, 0.3598718), Vector3(0, 1.5707964, 0)]
@@ -44,8 +44,9 @@ _data = {
 [node name="shotgun" type="Node3D" unique_id=2070773366]
 script = ExtResource("1_3lyww")
 description = "smoove off"
+is_auto = true
 base_damage = 20.0
-base_fire_rate = 1.5
+base_fire_rate = 1.1
 
 [node name="shotgun" parent="." unique_id=141467930 instance=ExtResource("2_x3vbk")]
 transform = Transform3D(-4.6332087e-08, 9.860548e-10, 1, 0.35215425, 0.935942, 1.5393152e-08, -0.935942, 0.35215425, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)
@@ -64,6 +65,26 @@ target_position = Vector3(-0.5, 0, -10)
 collision_mask = 7
 
 [node name="RayCast3D3" type="RayCast3D" parent="Raycasts" unique_id=231482325]
+target_position = Vector3(-1, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D4" type="RayCast3D" parent="Raycasts" unique_id=1367788592]
+transform = Transform3D(0.9952039, 0, 0.09782223, 0, 1, 0, -0.09782223, 0, 0.9952039, 0, 0, 0)
+target_position = Vector3(-0.5, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D7" type="RayCast3D" parent="Raycasts" unique_id=1467638163]
+transform = Transform3D(0.9952039, 0, 0.09782223, 0, 1, 0, -0.09782223, 0, 0.9952039, 0, 0, 0)
+target_position = Vector3(-1, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D8" type="RayCast3D" parent="Raycasts" unique_id=310280763]
+transform = Transform3D(0.96930283, 0, -0.24586995, 0, 1, 0, 0.24586995, 0, 0.96930283, 0, 0, 0)
+target_position = Vector3(-0.5, 0, -10)
+collision_mask = 7
+
+[node name="RayCast3D9" type="RayCast3D" parent="Raycasts" unique_id=1755101002]
+transform = Transform3D(0.96930283, 0, -0.24586995, 0, 1, 0, 0.24586995, 0, 0.96930283, 0, 0, 0)
 target_position = Vector3(-1, 0, -10)
 collision_mask = 7
 

@@ -3,8 +3,7 @@ extends Node3D
 var weapon_held: Node
 
 func interact() -> void:
-	
-	var holder = $"../Player/Camera3D/Weapon holder/"
+	var holder = get_tree().get_first_node_in_group("player").get_node("Camera3D/Weapon holder/")
 	var player_weapon = null
 	
 	if holder.get_child_count() > 0:
@@ -32,12 +31,14 @@ func create_weapon() -> void:
 	@warning_ignore("integer_division")
 	var budget: int = AutoLoad.point_budget / 8
 	
-	var affordable_guns: Array[PackedScene] = AutoLoad.get_affordable_items(budget, AutoLoad.guns)
+	var affordable_guns: Array[String] = AutoLoad.get_affordable_items(budget, AutoLoad.guns)
 	if affordable_guns.is_empty():
 		return
 		
-	var chosen_weapon_scene: PackedScene = affordable_guns.pick_random()
-	var weapon_cost: int = AutoLoad.guns[chosen_weapon_scene]
+	var chosen_weapon_path: String = affordable_guns.pick_random()
+	var weapon_cost: int = AutoLoad.guns[chosen_weapon_path]
+	
+	var chosen_weapon_scene: PackedScene = load(chosen_weapon_path) as PackedScene
 	var base: WeaponBase = chosen_weapon_scene.instantiate() as WeaponBase
 	
 	var remaining_budget: int = budget - weapon_cost
@@ -53,4 +54,3 @@ func create_weapon() -> void:
 	weapon_held.hide() 
 	show()
 	await get_tree().create_timer(10).timeout
-	get_parent()._ready()

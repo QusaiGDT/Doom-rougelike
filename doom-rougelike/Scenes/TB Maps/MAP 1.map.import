@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bbckfu2rxrt2u"
+path="res://.godot/imported/MAP 1.map-3ea42aa11c4d5e270a31e7ce4b0e65de.tres"
+
+[deps]
+
+source_file="res://Scenes/TB Maps/MAP 1.map"
+dest_files=["res://.godot/imported/MAP 1.map-3ea42aa11c4d5e270a31e7ce4b0e65de.tres"]
+
+[params]
+
