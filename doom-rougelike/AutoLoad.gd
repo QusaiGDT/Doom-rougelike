@@ -13,13 +13,18 @@ var guns := {
 	"res://Weapons/Axe/Axe.tscn": 3
 }
 
+# common : 40, uncommon : 30, rare : 20, epic : 10
+
 var mods := {
-	"res://effects/basic damage.tscn": 3,
-	"res://effects/basic FireRate.tscn": 1,
-	"res://effects/Cannon.tscn": 5,
-	"res://effects/Poision.tscn": 3,
-	"res://effects/Gambling addection.tscn": 3,
-	"res://effects/Bleed.tscn": 2
+	"res://effects/basic damage.tscn": 40,
+	"res://effects/Cannon.tscn": 20,
+	"res://effects/Poision.tscn": 30,
+	"res://effects/Gambling addection.tscn": 30,
+	"res://effects/Bleed.tscn": 30,
+	"res://effects/fire rate mult.tscn" : 20,
+	"res://effects/purifier.tscn" : 30,
+	"res://effects/Redeemer.tscn" : 20,
+	
 }
 
 var point_budget := 10

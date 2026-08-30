@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dfc175qifw8wc"]
+
+[ext_resource type="Script" uid="uid://t76wej8h8nmv" path="res://effects/logic/stat per kill.gd" id="1_od7cs"]
+
+[node name="Purifier" type="Node" unique_id=1462156321]
+script = ExtResource("1_od7cs")
+target_enemy_group = "Imp"
+kills_per_stack = 3
+stack_flat_damage = 2.0
+base_description = "+2 damage per 3 Imps killed"
+mod_name = "Purifier"

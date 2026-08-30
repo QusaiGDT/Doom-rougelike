@@ -7,14 +7,16 @@ var current_mod: Node
 var used_this_round: bool = false
 
 func _ready() -> void:
-	@warning_ignore("integer_division")
-	var budget: int = AutoLoad.point_budget / 8
-	var affordable: Array[String] = AutoLoad.get_affordable_items(budget, AutoLoad.mods)
+	var chosen_path: String = get_random_mod(AutoLoad.mods)
 	
-	if not affordable.is_empty():
-		var path = affordable.pick_random()
-		current_mod = (load(path) as PackedScene).instantiate()
-		label_3d.text = current_mod.mod_name
+	if not chosen_path.is_empty():
+		current_mod = (load(chosen_path) as PackedScene).instantiate()
+		
+		var label = get_node_or_null("Label3D") as Label3D
+		if label:
+			label.text = current_mod.mod_name
+
+
 
 func interact() -> void:
 	if used_this_round or not is_instance_valid(current_mod):
@@ -32,3 +34,23 @@ func interact() -> void:
 		current_mod = null
 		used_this_round = true
 		label_3d.text = "Empty"
+
+
+
+func get_random_mod(mod_dict: Dictionary) -> String:
+	var total_weight: int = 0
+	for weight in mod_dict.values():
+		total_weight += weight
+
+	if total_weight <= 0:
+		return ""
+
+	var roll := randi_range(1, total_weight)
+	var current_sum: int = 0
+
+	for path in mod_dict:
+		current_sum += mod_dict[path]
+		if roll <= current_sum:
+			return path
+
+	return ""

@@ -205,11 +205,11 @@
 			"steps": [
 				{
 					"details": "1",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "2",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "3",

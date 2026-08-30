@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://6kafg1uw07lf"]
+
+[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/logic/stat change base.gd" id="1_s3ool"]
+
+[node name="BasicDamage" type="Node" unique_id=1462156321]
+script = ExtResource("1_s3ool")
+mod_name = "reckless shooter"
+description = "0.5x secounds per shot, 3x recoil"
+flat_damage = 10.0
+fire_rate_mult = 0.5
+recoil_mult = 3.0
