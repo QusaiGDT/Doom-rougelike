@@ -21,8 +21,7 @@
 			"uuid": "0c26d5f3-aebe-460d-b572-91d6ad4abc69",
 			"title": "Doing",
 			"tasks": [
-				"2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6",
-				"b876cd54-ab58-4077-8094-90ff1d784165"
+				"2f07dc5c-fb65-4839-8bbe-b829bb6e8dc6"
 			]
 		},
 		{
@@ -35,18 +34,19 @@
 				"0bd459a2-2703-4eb9-a6d2-7d9f805d8050",
 				"bcd87a89-427d-48c6-bb58-bd0a51624bd5",
 				"1bd4fcae-dca9-4257-95e2-f177bdde4371",
-				"9ab1f26e-82a6-4289-b708-55cda1427b37"
+				"9ab1f26e-82a6-4289-b708-55cda1427b37",
+				"b876cd54-ab58-4077-8094-90ff1d784165",
+				"50d7f74a-0118-44f6-935b-0e6f2ac95ce5",
+				"2fb53c33-8061-4610-95bd-40662146e456",
+				"b879c782-ca62-4c7f-bb72-c680b1cc652d"
 			]
 		},
 		{
 			"uuid": "94163356-9ab1-4585-9ca7-e9bcf5dfdb8c",
 			"title": "Todo-Mechanics",
 			"tasks": [
-				"50d7f74a-0118-44f6-935b-0e6f2ac95ce5",
-				"2fb53c33-8061-4610-95bd-40662146e456",
 				"c2d6acff-8e0f-4c9e-a36b-9c504cc64d1f",
-				"e1827ddf-3e9d-4fe6-871c-32a62546addf",
-				"b879c782-ca62-4c7f-bb72-c680b1cc652d"
+				"e1827ddf-3e9d-4fe6-871c-32a62546addf"
 			]
 		}
 	],
@@ -221,7 +221,7 @@
 				},
 				{
 					"details": "5",
-					"done": false
+					"done": true
 				}
 			]
 		},

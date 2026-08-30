@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://o71tcidu1pyp"]
+
+[ext_resource type="Script" uid="uid://7an30rubne7u" path="res://effects/logic/goblin.gd" id="1_hh6pc"]
+
+[node name="Zombie" type="Node" unique_id=928491730]
+script = ExtResource("1_hh6pc")
+mod_name = "Goblin"
