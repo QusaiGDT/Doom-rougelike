@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://coyxy0pfrk8tg"]
 
 [ext_resource type="Script" uid="uid://c27hvbyp88vvk" path="res://Scenes/test.gd" id="1_qc4db"]
+[ext_resource type="PackedScene" uid="uid://cwojo81527tq5" path="res://Scenes/Chest.tscn" id="2_t45x2"]
 [ext_resource type="Script" uid="uid://cx581hhvd0j8a" path="res://Scenes/door.gd" id="3_t45x2"]
-[ext_resource type="Script" uid="uid://cr3tld5hdyl3g" path="res://Scenes/WeaponSpawner.gd" id="4_ys1qc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3qbn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -111,21 +111,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.208221, 0, 0.28311634)
 
 [node name="Enemies" type="Node" parent="." unique_id=1992222570]
 
-[node name="Weapon Spawner" type="CSGBox3D" parent="." unique_id=1033827604 groups=["Interactable"]]
+[node name="Weapon Spawner" parent="." unique_id=202701160 instance=ExtResource("2_t45x2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-use_collision = true
-collision_layer = 4
-collision_mask = 7
-material = SubResource("StandardMaterial3D_o3qbn")
-script = ExtResource("4_ys1qc")
-
-[node name="Weapon Spawner2" type="CSGBox3D" parent="." unique_id=2018242652 groups=["Interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
-use_collision = true
-collision_layer = 4
-collision_mask = 7
-material = SubResource("StandardMaterial3D_o3qbn")
-script = ExtResource("4_ys1qc")
 
 [node name="Door" type="CSGBox3D" parent="." unique_id=1308363808 groups=["Interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1.5, 0.5)

@@ -20,5 +20,3 @@ func _process(_delta: float) -> void:
 	if $Enemies.get_child_count() == 0 and not end_of_round:
 		end_of_round = true
 		AutoLoad.room_number += 1
-		$"Weapon Spawner".create_weapon()
-		$"Weapon Spawner2".create_weapon()

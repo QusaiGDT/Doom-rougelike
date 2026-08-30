@@ -112,7 +112,6 @@ color = Color(1, 1, 1, 0.3372549)
 
 [node name="ModsUI" type="Control" parent="Ui" unique_id=662095102]
 process_mode = 3
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -123,7 +122,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_i5ucr")
 
+[node name="Mods" type="VBoxContainer" parent="Ui/ModsUI" unique_id=1022721651]
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 739.0
+
+[node name="Button" type="Button" parent="Ui/ModsUI/Mods" unique_id=2111646177]
+custom_minimum_size = Vector2(11.63, 125.365)
+layout_mode = 2
+script = ExtResource("5_8xxnj")
+
+[node name="Button2" type="Button" parent="Ui/ModsUI/Mods" unique_id=569533346]
+custom_minimum_size = Vector2(11.63, 125.365)
+layout_mode = 2
+script = ExtResource("5_8xxnj")
+
+[node name="Button3" type="Button" parent="Ui/ModsUI/Mods" unique_id=2001502219]
+custom_minimum_size = Vector2(11.63, 125.365)
+layout_mode = 2
+script = ExtResource("5_8xxnj")
+
+[node name="Button4" type="Button" parent="Ui/ModsUI/Mods" unique_id=1279669711]
+custom_minimum_size = Vector2(11.63, 125.365)
+layout_mode = 2
+script = ExtResource("5_8xxnj")
+
+[node name="Button5" type="Button" parent="Ui/ModsUI/Mods" unique_id=469403842]
+custom_minimum_size = Vector2(11.63, 125.365)
+layout_mode = 2
+script = ExtResource("5_8xxnj")
+
 [node name="ColorRect3" type="ColorRect" parent="Ui/ModsUI" unique_id=1308573047]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -133,41 +163,6 @@ grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 color = Color(0.083911665, 0.083911665, 0.083911665, 1)
-
-[node name="Mods" type="VBoxContainer" parent="Ui/ModsUI" unique_id=1022721651]
-layout_mode = 0
-offset_right = 380.0
-offset_bottom = 739.0
-
-[node name="Button" type="Button" parent="Ui/ModsUI/Mods" unique_id=2111646177]
-custom_minimum_size = Vector2(11.63, 125.365)
-layout_mode = 2
-text = "dcr"
-script = ExtResource("5_8xxnj")
-
-[node name="Button2" type="Button" parent="Ui/ModsUI/Mods" unique_id=569533346]
-custom_minimum_size = Vector2(11.63, 125.365)
-layout_mode = 2
-text = "dcr"
-script = ExtResource("5_8xxnj")
-
-[node name="Button3" type="Button" parent="Ui/ModsUI/Mods" unique_id=2001502219]
-custom_minimum_size = Vector2(11.63, 125.365)
-layout_mode = 2
-text = "dcr"
-script = ExtResource("5_8xxnj")
-
-[node name="Button4" type="Button" parent="Ui/ModsUI/Mods" unique_id=1279669711]
-custom_minimum_size = Vector2(11.63, 125.365)
-layout_mode = 2
-text = "dcr"
-script = ExtResource("5_8xxnj")
-
-[node name="Button5" type="Button" parent="Ui/ModsUI/Mods" unique_id=469403842]
-custom_minimum_size = Vector2(11.63, 125.365)
-layout_mode = 2
-text = "dcr"
-script = ExtResource("5_8xxnj")
 
 [node name="Remove mod" type="ColorRect" parent="Ui/ModsUI" unique_id=975527056]
 custom_minimum_size = Vector2(18.49, 88.715)

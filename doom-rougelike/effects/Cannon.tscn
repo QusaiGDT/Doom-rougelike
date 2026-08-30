@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bameyidr6bgpw"]
 
-[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/stat change base.gd" id="1_61ocx"]
+[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/logic/stat change base.gd" id="1_61ocx"]
 
 [node name="Cannon" type="Node" unique_id=899190444]
 script = ExtResource("1_61ocx")

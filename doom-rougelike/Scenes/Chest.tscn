@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cwojo81527tq5"]
+
+[ext_resource type="Script" uid="uid://cr3tld5hdyl3g" path="res://Scenes/WeaponSpawner.gd" id="1_ghm5h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3qbn"]
+albedo_color = Color(0.21241716, 0.42451295, 0.35951188, 1)
+
+[node name="Weapon Spawner" type="CSGBox3D" unique_id=202701160 groups=["Interactable"]]
+use_collision = true
+collision_layer = 4
+collision_mask = 7
+material = SubResource("StandardMaterial3D_o3qbn")
+script = ExtResource("1_ghm5h")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=967800639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+billboard = 2
+text = "Mod"

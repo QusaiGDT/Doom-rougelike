@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c1566nn32wywc"]
 
-[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/stat change base.gd" id="1_dhc6k"]
+[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/logic/stat change base.gd" id="1_dhc6k"]
 
 [node name="BasicDamage" type="Node" unique_id=1462156321]
 script = ExtResource("1_dhc6k")
 mod_name = "Basic Damage buff"
-description = "Its in the name, +50% damage"
-damage_mult = 1.5
+description = "+10 damage"
+flat_damage = 10.0

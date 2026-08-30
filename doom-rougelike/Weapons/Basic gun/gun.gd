@@ -3,6 +3,7 @@ extends WeaponBase
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 
 func _shoot() -> void:
+	$AnimationPlayer.stop()
 	if ray_cast_3d.is_colliding():
 		if ray_cast_3d.get_collider().is_in_group("damagable"):
 			ray_cast_3d.get_collider().damage(calculate_shot_damage())
@@ -14,3 +15,4 @@ func _shoot() -> void:
 	var anim_length: float = $AnimationPlayer.get_animation("shoot").length
 	var speed: float = anim_length / get_fire_rate()
 	$AnimationPlayer.play("shoot", -1, speed)
+	fired.emit()

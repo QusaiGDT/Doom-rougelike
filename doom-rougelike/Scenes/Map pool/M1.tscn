@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c27hvbyp88vvk" path="res://Scenes/test.gd" id="1_ndyqr"]
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="4_h1mxd"]
-[ext_resource type="Script" uid="uid://cr3tld5hdyl3g" path="res://Scenes/WeaponSpawner.gd" id="4_ik8v0"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="5_3dack"]
 [ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://addons/func_godot/textures/default_texture.png" id="5_ik8v0"]
 [ext_resource type="Script" uid="uid://cx581hhvd0j8a" path="res://Scenes/door.gd" id="6_3dack"]
+[ext_resource type="PackedScene" uid="uid://cwojo81527tq5" path="res://Scenes/Chest.tscn" id="6_ik8v0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3qbn"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -163,22 +163,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.208221, 9, -13.716884)
 
 [node name="Enemies" type="Node" parent="." unique_id=1992222570]
 
-[node name="Weapon Spawner" type="CSGBox3D" parent="." unique_id=1033827604 groups=["Interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 9.489176, -42)
-use_collision = true
-collision_layer = 4
-collision_mask = 7
-material = SubResource("StandardMaterial3D_o3qbn")
-script = ExtResource("4_ik8v0")
-
-[node name="Weapon Spawner2" type="CSGBox3D" parent="." unique_id=1784741947 groups=["Interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 9.489176, -42)
-use_collision = true
-collision_layer = 4
-collision_mask = 7
-material = SubResource("StandardMaterial3D_o3qbn")
-script = ExtResource("4_ik8v0")
-
 [node name="Door" type="CSGBox3D" parent="." unique_id=1577306126 groups=["Interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.460153, 9.989176, -42.5)
 use_collision = true
@@ -190,3 +174,9 @@ script = ExtResource("6_3dack")
 
 [node name="Player Spawn Position" type="Marker3D" parent="." unique_id=1064583027]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, -12)
+
+[node name="Weapon Spawner" parent="." unique_id=202701160 instance=ExtResource("6_ik8v0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 9.481582, -44)
+
+[node name="Weapon Spawner2" parent="." unique_id=825276404 instance=ExtResource("6_ik8v0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.136793, 9.481582, -44)

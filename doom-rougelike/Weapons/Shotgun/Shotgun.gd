@@ -3,6 +3,7 @@ extends WeaponBase
 @onready var raycast_container:= $Raycasts
 
 func _shoot() -> void:
+	$AnimationPlayer.stop()
 	for ray_cast_3d in raycast_container.get_children():
 		if ray_cast_3d.is_colliding():
 			var collider = ray_cast_3d.get_collider()

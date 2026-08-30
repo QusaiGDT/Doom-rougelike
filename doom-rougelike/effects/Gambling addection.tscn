@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://blwawg0dx8toq"]
 
-[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/stat change base.gd" id="1_8k2o2"]
+[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/logic/stat change base.gd" id="1_8k2o2"]
 
 [node name="Gambling" type="Node" unique_id=899190444]
 script = ExtResource("1_8k2o2")
 mod_name = "Gambling addict"
 description = "+50% Crit chance, +500% crit damage, -75% base damage "
 damage_mult = 0.25
-bonus_crit_chance = 0.5
-bonus_crit_mult = 5.0
+flat_crit_chance = 0.5
+flat_crit_mult = 5.0

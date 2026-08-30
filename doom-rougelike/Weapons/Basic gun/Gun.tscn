@@ -65,13 +65,12 @@ _data = {
 &"shoot": SubResource("Animation_hwbi2")
 }
 
-[node name="Pew" type="Node3D" unique_id=2070773366 node_paths=PackedStringArray("active_mods")]
+[node name="Pew" type="Node3D" unique_id=2070773366]
 script = ExtResource("1_hwbi2")
 description = "a basic Pew"
 is_auto = true
 base_damage = 20.0
-base_fire_rate = 0.25
-active_mods = [null, null]
+base_recoil = Vector3(1, 0, 0)
 
 [node name="pew" parent="." unique_id=1925523909 instance=ExtResource("1_6pdva")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)

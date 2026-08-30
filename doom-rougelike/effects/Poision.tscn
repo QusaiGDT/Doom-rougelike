@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkyxhoaofjfsv"]
 
-[ext_resource type="Script" uid="uid://c25yeu487wkkw" path="res://effects/DOT effect.gd" id="1_bcoc2"]
+[ext_resource type="Script" uid="uid://c25yeu487wkkw" path="res://effects/logic/DOT effect.gd" id="1_bcoc2"]
 
 [node name="Poision" type="Node" unique_id=1654308551]
 script = ExtResource("1_bcoc2")

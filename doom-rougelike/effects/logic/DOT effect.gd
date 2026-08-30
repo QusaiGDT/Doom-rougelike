@@ -20,7 +20,7 @@ func apply_dot(target: Node) -> void:
 		return
 
 	var dot_node = Node.new()
-	dot_node.set_script(preload("res://effects/dot_ticker.gd"))
+	dot_node.set_script(preload("res://effects/logic/dot_ticker.gd"))
 	dot_node.name = tracker_name
 	
 	target.add_child(dot_node)

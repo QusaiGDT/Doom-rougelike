@@ -8,10 +8,11 @@ const SENSITIVITY = 0.003
 @export var max_hp := 200
 @export var hp := 200
 
-@onready var camera = $Camera3D
-
+@onready var camera = $RecoilNode/Camera3D
+@onready var interact_cast: RayCast3D = $"RecoilNode/Camera3D/Interact cast"
 @onready var weapon_label: Label = $"Ui/Weapon label"
-@onready var weapon_holder: Node3D = $"Camera3D/Weapon holder"
+@onready var weapon_holder: Node3D = $"RecoilNode/Camera3D/Weapon holder"
+@onready var mods_ui: Control = $Ui/ModsUI
 
 var current_weapon: WeaponBase = null
 
@@ -22,9 +23,10 @@ func _ready():
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("interact"):
-		if $"Camera3D/Interact cast".is_colliding():
-			if $"Camera3D/Interact cast".get_collider().is_in_group("Interactable"):
-				$"Camera3D/Interact cast".get_collider().interact()
+		
+		if interact_cast.is_colliding():
+			if interact_cast.get_collider().is_in_group("Interactable"):
+				interact_cast.get_collider().interact()
 	
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * SENSITIVITY)

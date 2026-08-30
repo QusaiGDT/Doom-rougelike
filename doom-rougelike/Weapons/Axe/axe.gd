@@ -13,6 +13,7 @@ func _ready() -> void:
 		add_child(_base_bleed_mod)
 
 func _shoot() -> void:
+	$AnimationPlayer.stop()
 	for body in $Area3D.get_overlapping_bodies():
 		
 		if body and body.is_in_group("damagable") and not body.is_in_group("player"):

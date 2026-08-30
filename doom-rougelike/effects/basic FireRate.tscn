@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://brk58t4kghceh"]
 
-[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/stat change base.gd" id="1_jxs2t"]
+[ext_resource type="Script" uid="uid://c0nuco5jllxsp" path="res://effects/logic/stat change base.gd" id="1_jxs2t"]
 
 [node name="BasicFireRate" type="Node" unique_id=1462156321]
 script = ExtResource("1_jxs2t")
-mod_name = "Basic Fire Rate Buff"
-description = "Its in the name, +25% Fire rate"
-fire_rate_mult = 0.75
+mod_name = "Basic Fire Rate"
+description = "-0.1s per shot"
+flat_fire_rate = -0.1

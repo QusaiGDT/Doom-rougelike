@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://demoifar2uko8"]
 
-[ext_resource type="Script" uid="uid://c25yeu487wkkw" path="res://effects/DOT effect.gd" id="1_mt650"]
+[ext_resource type="Script" uid="uid://c25yeu487wkkw" path="res://effects/logic/DOT effect.gd" id="1_mt650"]
 
 [node name="Bleed" type="Node" unique_id=1654308551]
 script = ExtResource("1_mt650")

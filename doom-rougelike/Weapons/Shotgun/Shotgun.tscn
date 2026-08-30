@@ -47,6 +47,7 @@ description = "smoove off"
 is_auto = true
 base_damage = 20.0
 base_fire_rate = 1.1
+recoil = Vector3(1, 1, 0)
 
 [node name="shotgun" parent="." unique_id=141467930 instance=ExtResource("2_x3vbk")]
 transform = Transform3D(-4.6332087e-08, 9.860548e-10, 1, 0.35215425, 0.935942, 1.5393152e-08, -0.935942, 0.35215425, -4.371139e-08, 0.13158782, -0.065147445, -0.19329439)
