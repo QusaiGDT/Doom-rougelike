@@ -10,7 +10,6 @@ const SENSITIVITY = 0.003
 
 @onready var camera = $RecoilNode/Camera3D
 @onready var interact_cast: RayCast3D = $"RecoilNode/Camera3D/Interact cast"
-@onready var weapon_label: Label = $"Ui/Weapon label"
 @onready var weapon_holder: Node3D = $"RecoilNode/Camera3D/Weapon holder"
 @onready var mods_ui: Control = $Ui/ModsUI
 
@@ -62,12 +61,6 @@ func update_ui() -> void:
 	if weapon_holder.get_child_count() > 0:
 		current_weapon = weapon_holder.get_child(0) as WeaponBase
 	
-	if not weapon_label:
-		return
-
-	if not is_instance_valid(current_weapon):
-		weapon_label.text = "NO WEAPON"
-		return
 
 	var text: String = current_weapon.name.to_upper() + "\n "
 	
@@ -93,7 +86,6 @@ func update_ui() -> void:
 				text += ": \n " + str(mod_desc)
 			text += "\n"
 
-	weapon_label.text = text
 
 func damage(amount):
 	hp -= amount

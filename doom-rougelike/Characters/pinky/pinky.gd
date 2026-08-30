@@ -23,7 +23,7 @@ func shoot() -> void:
 	
 	proj.global_position = ray_cast_3d.global_position
 	
-	proj.look_at(player.global_position, Vector3.UP)
+	proj.look_at(player.global_position + Vector3(0,1.5,0), Vector3.UP)
 	
 	proj.damage_amount = projectile_damage
 	proj.speed = projectile_speed

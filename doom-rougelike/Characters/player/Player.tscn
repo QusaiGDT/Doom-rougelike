@@ -77,10 +77,11 @@ offset_right = 192.0
 offset_bottom = 208.0
 color = Color(0, 0, 0, 0.22745098)
 
-[node name="Weapon label" type="Label" parent="Ui" unique_id=12616556]
+[node name="Mod label" type="Label" parent="Ui" unique_id=12616556]
 layout_mode = 0
+offset_top = 451.0
 offset_right = 192.0
-offset_bottom = 208.0
+offset_bottom = 527.0
 
 [node name="HP" type="Label" parent="Ui" unique_id=957195470]
 layout_mode = 1
@@ -112,7 +113,6 @@ color = Color(1, 1, 1, 0.3372549)
 
 [node name="ModsUI" type="Control" parent="Ui" unique_id=662095102]
 process_mode = 3
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -121,50 +121,59 @@ offset_left = 382.0
 offset_right = -390.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("4_i5ucr")
 
 [node name="ColorRect3" type="ColorRect" parent="Ui/ModsUI" unique_id=1308573047]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = -1.005
+anchor_right = 2.026
 anchor_bottom = 1.0
+offset_left = 127.899994
+offset_top = 560.0
+offset_right = -138.88
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 2
 color = Color(0.083911665, 0.083911665, 0.083911665, 1)
 
-[node name="Mods" type="VBoxContainer" parent="Ui/ModsUI" unique_id=1022721651]
+[node name="Mods" type="HBoxContainer" parent="Ui/ModsUI" unique_id=1971194466]
 layout_mode = 0
-offset_right = 380.0
-offset_bottom = 739.0
+offset_left = -254.0
+offset_top = 560.0
+offset_right = 632.0
+offset_bottom = 670.0
+mouse_filter = 0
 
 [node name="Button" type="Button" parent="Ui/ModsUI/Mods" unique_id=2111646177]
-custom_minimum_size = Vector2(11.63, 125.365)
+custom_minimum_size = Vector2(173.205, 0)
 layout_mode = 2
 text = "dcr"
 script = ExtResource("5_8xxnj")
 
 [node name="Button2" type="Button" parent="Ui/ModsUI/Mods" unique_id=569533346]
-custom_minimum_size = Vector2(11.63, 125.365)
+custom_minimum_size = Vector2(173.205, 0)
 layout_mode = 2
 text = "dcr"
 script = ExtResource("5_8xxnj")
 
 [node name="Button3" type="Button" parent="Ui/ModsUI/Mods" unique_id=2001502219]
-custom_minimum_size = Vector2(11.63, 125.365)
+custom_minimum_size = Vector2(173.205, 0)
 layout_mode = 2
 text = "dcr"
 script = ExtResource("5_8xxnj")
 
 [node name="Button4" type="Button" parent="Ui/ModsUI/Mods" unique_id=1279669711]
-custom_minimum_size = Vector2(11.63, 125.365)
+custom_minimum_size = Vector2(173.205, 0)
 layout_mode = 2
 text = "dcr"
 script = ExtResource("5_8xxnj")
 
 [node name="Button5" type="Button" parent="Ui/ModsUI/Mods" unique_id=469403842]
-custom_minimum_size = Vector2(11.63, 125.365)
+custom_minimum_size = Vector2(173.205, 0)
 layout_mode = 2
 text = "dcr"
 script = ExtResource("5_8xxnj")
@@ -173,10 +182,10 @@ script = ExtResource("5_8xxnj")
 custom_minimum_size = Vector2(18.49, 88.715)
 custom_maximum_size = Vector2(103.65, -1)
 layout_mode = 0
-offset_left = 498.0
-offset_top = 559.0
-offset_right = 601.65
-offset_bottom = 648.0
+offset_left = 671.0
+offset_top = 560.0
+offset_right = 774.65
+offset_bottom = 649.0
 offset_transform_enabled = true
 color = Color(0.4084483, 0, 0.14154607, 1)
 script = SubResource("GDScript_uhn5l")

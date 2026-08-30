@@ -12,6 +12,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	global_transform.origin -= global_transform.basis.z * speed * delta
 
+
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("damagable"):
 		body.damage(damage_amount)

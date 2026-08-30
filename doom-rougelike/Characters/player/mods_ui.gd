@@ -48,7 +48,6 @@ func close_menu() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	get_tree().paused = false
 
-
 func _on_mod_button_pressed(weapon: WeaponBase, mod: Node, button: Button) -> void:
 	if is_instance_valid(weapon) and mod in weapon.active_mods:
 		weapon.active_mods.erase(mod)

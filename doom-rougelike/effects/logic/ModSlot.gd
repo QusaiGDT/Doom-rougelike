@@ -3,6 +3,19 @@ extends Button
 var slot_index: int
 var current_weapon: WeaponBase
 
+@onready var weapon_label: Label = $"../../../Mod label"
+
+func _ready() -> void:
+	mouse_entered.connect(_show_description.bind(true))
+	mouse_exited.connect(_show_description.bind(false))
+
+func _show_description(state: bool) -> void:
+	if state and slot_index < current_weapon.active_mods.size():
+		var mod = current_weapon.active_mods[slot_index]
+		weapon_label.text = mod.description
+	else:
+		weapon_label.text = ""
+
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if slot_index >= current_weapon.active_mods.size():
 		return null
