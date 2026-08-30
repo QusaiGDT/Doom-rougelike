@@ -7,7 +7,18 @@ var current_mod: Node
 var used_this_round: bool = false
 
 func _ready() -> void:
-	var chosen_path: String = get_random_mod(AutoLoad.mods)
+	var pool = AutoLoad.mods.duplicate()
+	
+	var holder = get_tree().get_first_node_in_group("player").get_node("RecoilNode/Camera3D/Weapon holder")
+	if holder.get_child_count() > 0:
+		for mod in holder.get_child(0).active_mods:
+			pool.erase(mod.scene_file_path)
+			
+	for chest in get_tree().get_nodes_in_group("chest"):
+		if chest.current_mod:
+			pool.erase(chest.current_mod.scene_file_path)
+
+	var chosen_path: String = get_random_mod(pool)
 	
 	if not chosen_path.is_empty():
 		current_mod = (load(chosen_path) as PackedScene).instantiate()

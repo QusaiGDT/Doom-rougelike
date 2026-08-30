@@ -7,5 +7,5 @@ script = ExtResource("1_bqwhg")
 target_enemy_group = "Pinky"
 kills_per_stack = 1
 stack_damage_mult = 0.1
-base_description = "0.1x damage per Pinkiy killed"
-mod_name = "Purifier"
+base_description = "0.1x damage per Pinky killed"
+mod_name = "Redeemer"

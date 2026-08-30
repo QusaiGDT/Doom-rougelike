@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bsjvm74nvcfmc"]
+
+[ext_resource type="Script" uid="uid://dbn7lsn66o327" path="res://effects/logic/Vampire.gd" id="1_slren"]
+
+[node name="LifeSteal" type="Node" unique_id=928491730]
+script = ExtResource("1_slren")
+mod_name = "Vampire"
+description = "+2 HP per kill"

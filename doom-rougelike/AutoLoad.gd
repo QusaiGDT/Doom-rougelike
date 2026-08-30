@@ -24,7 +24,8 @@ var mods := {
 	"res://effects/fire rate mult.tscn" : 20,
 	"res://effects/purifier.tscn" : 30,
 	"res://effects/Redeemer.tscn" : 20,
-	
+	"res://effects/Vampire.tscn" : 20,
+	"res://effects/Zombie.tscn" : 20,
 }
 
 var point_budget := 10

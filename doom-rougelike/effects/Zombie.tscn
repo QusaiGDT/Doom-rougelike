@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://csvy327yex64s"]
+
+[ext_resource type="Script" uid="uid://b84ow5vocmwpm" path="res://effects/logic/zombie.gd" id="1_80aji"]
+
+[node name="Zombie" type="Node" unique_id=928491730]
+script = ExtResource("1_80aji")
+mod_name = "Zombie"

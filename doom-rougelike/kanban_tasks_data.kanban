@@ -213,11 +213,11 @@
 				},
 				{
 					"details": "3",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "4",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "5",
