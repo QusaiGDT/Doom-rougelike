@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://do6vgdd6px1e4"]
+
+[ext_resource type="Script" uid="uid://d1pno35b1b1dw" path="res://effects/logic/bound.gd" id="1_w1dxv"]
+
+[node name="Roulette" type="Node" unique_id=928491730]
+script = ExtResource("1_w1dxv")
+mod_name = "roulette"
+description = "Land a garanteed critical every 6th shot"

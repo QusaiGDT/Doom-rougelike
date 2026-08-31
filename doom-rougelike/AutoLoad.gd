@@ -27,6 +27,8 @@ var mods := {
 	"res://effects/Vampire.tscn" : 20,
 	"res://effects/Zombie.tscn" : 20,
 	"res://effects/Goblin.tscn" : 20,
+	"res://effects/Spirit.tscn" : 40,
+	"res://effects/roulette.tscn" : 30,
 }
 
 var point_budget := 10

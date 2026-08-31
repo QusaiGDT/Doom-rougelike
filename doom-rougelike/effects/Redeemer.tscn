@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://dm1m11gxwd3ls"]
 
-[ext_resource type="Script" uid="uid://t76wej8h8nmv" path="res://effects/logic/stat per kill.gd" id="1_bqwhg"]
+[ext_resource type="Script" uid="uid://g7gjpelfrbb4" path="res://effects/logic/redeemer.gd" id="1_bqwhg"]
 
 [node name="Redeemer" type="Node" unique_id=1462156321]
 script = ExtResource("1_bqwhg")
-target_enemy_group = "Pinky"
-kills_per_stack = 1
-stack_damage_mult = 0.1
-base_description = "0.1x damage per Pinky killed"
 mod_name = "Redeemer"
+description = "x0.1 damage per Pinky killed, currently x1.0"

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://buamow25gsq34"]
+
+[ext_resource type="Script" uid="uid://dfyl4k28pbqsr" path="res://effects/logic/spirit.gd" id="1_idf2p"]
+
+[node name="Spirit" type="Node" unique_id=519098636]
+script = ExtResource("1_idf2p")
+mod_name = "Spirit"
+description = "+100 damage, loses 5 per enemy killed"
+flat_damage = 100.0
