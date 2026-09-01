@@ -15,4 +15,4 @@ func _shoot() -> void:
 	var anim_length: float = $AnimationPlayer.get_animation("shoot").length
 	var speed: float = anim_length / get_fire_rate()
 	$AnimationPlayer.play("shoot", -1, speed)
-	fired.emit()
+	SignalBus.fired.emit()

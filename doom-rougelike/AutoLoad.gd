@@ -1,6 +1,7 @@
 extends Node
 
 var enemies := {
+	"res://Characters/Lost Soul/LostSoul.tscn" : 8,
 	"res://Characters/Imp/Imp.tscn": 3,
 	"res://Characters/pinky/Pinky.tscn": 8,
 	"res://Characters/Large pinky/Large Pinky.tscn": 14

@@ -5,5 +5,5 @@
 [node name="Spirit" type="Node" unique_id=519098636]
 script = ExtResource("1_idf2p")
 mod_name = "Spirit"
-description = "+100 damage, loses 5 per enemy killed"
+description = "+100 damage, loses 2 per shot fired"
 flat_damage = 100.0

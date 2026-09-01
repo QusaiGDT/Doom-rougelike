@@ -38,5 +38,5 @@ func setAimRecoil(newRecoil : Vector3):
 
 func _on_weapon_holder_child_entered_tree(node: Node) -> void:
 	if node is WeaponBase:
-		node.fired.connect(recoilFire)
+		SignalBus.fired.connect(recoilFire)
 		setRecoil(node.get_recoil())

@@ -4,6 +4,7 @@ const SPEED = 10.0
 const ACCEL = 20.0         
 const FRICTION = 14.0      
 const SENSITIVITY = 0.003  
+const JUMP_ACCEL = 6
 
 @export var max_hp := 200
 @export var hp := 200
@@ -35,10 +36,12 @@ func _unhandled_input(event):
 
 func _physics_process(delta):
 	if not is_on_floor():
-		velocity.y -= 18.0 * delta
+		velocity.y -= 12.0 * delta
+	elif Input.is_action_just_pressed("jump"):
+		velocity.y = JUMP_ACCEL
 
 	var input_dir = Input.get_vector("left", "right", "up", "down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y))
 	
 	if direction:
 		velocity.x = move_toward(velocity.x, direction.x * SPEED, ACCEL * delta)
@@ -58,33 +61,7 @@ func update_ui() -> void:
 	$Ui/HP.text +=  "round " + str(AutoLoad.room_number)
 	$Ui/HP.text +=  "\nscore " + str(AutoLoad.point_budget)
 	
-	if weapon_holder.get_child_count() > 0:
-		current_weapon = weapon_holder.get_child(0) as WeaponBase
 	
-
-	var text: String = current_weapon.name.to_upper() + "\n "
-	
-	if "description" in current_weapon and current_weapon.description != "":
-		text += current_weapon.description + "\n\n"
-
-	if current_weapon.active_mods.is_empty():
-		text += "No Modifiers"
-	else:
-		for mod in current_weapon.active_mods:
-			if not is_instance_valid(mod):
-				continue
-				
-			var mod_name = mod.get("mod_name")
-			if mod_name == null or str(mod_name) == "":
-				mod_name = mod.name
-			var mod_desc = mod.get("description")
-			if mod_desc == null:
-				mod_desc = ""
-			
-			text += "• " + str(mod_name)
-			if str(mod_desc) != "":
-				text += ": \n " + str(mod_desc)
-			text += "\n"
 
 
 func damage(amount):

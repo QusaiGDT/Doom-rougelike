@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		_shoot()
 
 func _shoot() -> void:
-	SignalBus.fired.emit()
+	pass
 
 func get_recoil() -> Vector3:
 	var total_recoil: Vector3 = base_recoil

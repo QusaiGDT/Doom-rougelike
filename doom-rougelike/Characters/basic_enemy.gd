@@ -38,7 +38,6 @@ func _physics_process(delta: float) -> void:
 func damage(amount) -> void:
 	hp -= amount
 
-	# Spawn damage text in the world
 	if floating_text_scene:
 		var text_instance = floating_text_scene.instantiate()
 		get_tree().root.add_child(text_instance)

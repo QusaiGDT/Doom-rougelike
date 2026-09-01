@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dxloxj72b2xoc"]
+
+[ext_resource type="Script" uid="uid://bvm6u07477rfu" path="res://Characters/Lost Soul/lost_soul.gd" id="1_k0uj0"]
+[ext_resource type="Texture2D" uid="uid://cwbh2wmic07m0" path="res://assets/Lostsoul_sprite.webp" id="2_fsmqj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4nvk"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("2_fsmqj")
+uv1_scale = Vector3(1.91, 1.91, 1.91)
+uv1_offset = Vector3(0.135, 0.005, 0)
+billboard_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_wl8il"]
+material = SubResource("StandardMaterial3D_n4nvk")
+size = Vector3(0.975, 1.52, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_68ea6"]
+size = Vector3(0.9867871, 1.2055664, 1)
+
+[node name="LostSoul" type="CharacterBody3D" unique_id=1201078734 groups=["damagable"]]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_k0uj0")
+speed = 4
+metadata/_custom_type_script = "uid://cshnod2vj686p"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1299236327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_wl8il")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=728902878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035414994, 0.7886963, 0)
+shape = SubResource("BoxShape3D_68ea6")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1541957036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77468395, 0)
+target_position = Vector3(0, 0, -1)
