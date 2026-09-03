@@ -5,8 +5,11 @@ extends Node3D
 
 var current_mod: Node
 var used_this_round: bool = false
+var end_of_round := false
 
 func _ready() -> void:
+	SignalBus.end_of_round.connect(_end_of_round)
+	
 	var pool = AutoLoad.mods.duplicate()
 	
 	var holder = get_tree().get_first_node_in_group("player").get_node("RecoilNode/Camera3D/Weapon holder")
@@ -27,24 +30,27 @@ func _ready() -> void:
 		if label:
 			label.text = current_mod.mod_name
 
-
+func _end_of_round():
+	end_of_round = true
+	label_3d.show()
 
 func interact() -> void:
-	if used_this_round or not is_instance_valid(current_mod):
-		return
+	if end_of_round:
+		if used_this_round or not is_instance_valid(current_mod):
+			return
 
-	var holder = get_tree().get_first_node_in_group("player").get_node("RecoilNode/Camera3D/Weapon holder")
-	if holder.get_child_count() == 0:
-		return
+		var holder = get_tree().get_first_node_in_group("player").get_node("RecoilNode/Camera3D/Weapon holder")
+		if holder.get_child_count() == 0:
+			return
+			
+		var weapon = holder.get_child(0) as WeaponBase
 		
-	var weapon = holder.get_child(0) as WeaponBase
-	
-	if weapon.active_mods.size() < max_mods_per_weapon:
-		weapon.add_child(current_mod)
-		weapon.active_mods.append(current_mod)
-		current_mod = null
-		used_this_round = true
-		label_3d.text = "Empty"
+		if weapon.active_mods.size() < max_mods_per_weapon:
+			weapon.add_child(current_mod)
+			weapon.active_mods.append(current_mod)
+			current_mod = null
+			used_this_round = true
+			label_3d.text = "Empty"
 
 
 

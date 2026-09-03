@@ -14,5 +14,6 @@ script = ExtResource("1_ghm5h")
 
 [node name="Label3D" type="Label3D" parent="." unique_id=967800639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 billboard = 2
 text = "Mod"
